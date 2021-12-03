@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 1px solid black;
+}
+
+.container {
+    display: grid;
+    border: 1px solid teal;
+    min-height: 500px;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 10% repeat(5, 16%) 10%;
+    grid-gap: 1px;
+    grid-template-areas: 
+        "title title title title"
+        "navBar customerSupport  search search"
+        "navBar box1 box2 box3"
+        "navBar box4 box5 box6"
+        "navBar box7 box8 box9"
+        "navBar highlightCoffee highlightCoffee highlightCoffee"
+        "navBar lastContainer lastContainer lastContainer";
+}
+
+.title {
+    grid-row: 1/2;
+    grid-column: 1/5;
+    background-color: dimgray;
+}
+
+.navBar {
+    grid-row: 2/8;
+    grid-column: 1/2;
+    background-color: gray;
+}
+
+#customerSupport {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-color: gray;
+}
+
+#search {
+    grid-row: 2/3;
+    grid-column: 4/5;
+    background-color: gray;
+}
+
+#box1, #box2, #box3 {
+    grid-row: 3/4;
+    background-color: lightseagreen;
+}
+
+#box4, #box5, #box6 {
+    grid-row: 4/5;
+    background-color: lightseagreen;
+}
+
+#box7, #box8, #box9 {
+    grid-row: 5/6;
+    background-color: lightseagreen;
+}
+
+#highlightCoffee {
+    grid-row: 6/7;
+    grid-column: 2/5;
+    background-color: slategrey;
+}
+
+#lastContainer {
+    grid-row: 7/8;
+    grid-column: 2/5;
+}
